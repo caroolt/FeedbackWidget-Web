@@ -18,7 +18,7 @@
 
 ### Descrição do Projeto 
 ###### descrição
-Este projeto foi pensado para ser algo "Simples", mas que me ajuda a estudar reactJS, reactNative (vou fazer a versão mobile) e nodeJS - se preocupando com a acessibilidade. O objetivo do projeto é ser um widget onde o usuário poderá enviar feedback, seja um bug, uma ideia de melhoria ou qualquer outro feedback que não se enquadre nessas outras duas categorias, além disso, o usuário terá a opção de inserir uma imagem da tela, mas este não terá que tirar um print, já que ao clicar no botão o print é feito automaticamente e aplicada no feedback. Ao enviar esse feedback, ele é inserido em um banco de dados e enviado por e-mail aos desenvolvedores.
+Este projeto foi pensado para ser algo "Simples", mas que me ajude a estudar reactJS, reactNative (vou fazer a versão mobile) e nodeJS - se preocupando com a acessibilidade. O objetivo do projeto é ser um widget onde o usuário poderá enviar feedback, seja um bug, uma ideia de melhoria ou qualquer outro feedback que não se enquadre nessas outras duas categorias, além disso, o usuário terá a opção de inserir uma imagem da tela, mas este não terá que tirar um print, já que ao clicar no botão o print é feito automaticamente e aplicada no feedback. Ao enviar esse feedback, ele é inserido em um banco de dados e enviado por e-mail aos desenvolvedores.
 
 ### Técnicas e Tecnologias
 ###### tecnologias
