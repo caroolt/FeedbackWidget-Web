@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.chat {
+  @apply w-6 h-6 
+}
+
+.containerChat {
+  @apply absolute bottom-5 right-5
+}
+
+.hoverFeedbackText {
+  @apply max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-linear
+}
+
+.spaceFeedbackText{
+ @apply pl-2
+}
