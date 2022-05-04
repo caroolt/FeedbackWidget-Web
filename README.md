@@ -1,6 +1,6 @@
 
 
-<h1 align="center">FeedWidget</h1>
+<h1 align="center">FeedGet</h1>
 
 ![issues](https://img.shields.io/github/issues/caroolt/feedbackWidget-Web?color=red) ![license](https://img.shields.io/github/license/caroolt/feedbackWidget-Web)
 
