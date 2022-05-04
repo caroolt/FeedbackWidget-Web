@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-[#09090A]  text-zinc-100
+}
+
 .chat {
   @apply w-6 h-6 
 }
 
 .containerChat {
-  @apply absolute bottom-5 right-5
+  @apply absolute bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col items-end
 }
 
 .hoverFeedbackText {
@@ -16,4 +20,86 @@
 
 .spaceFeedbackText{
  @apply pl-2
+}
+
+.containerWidgetForm{
+  @apply bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col items-center shadow-lg w-[calc(100vw-2rem)] md:w-96
+}
+
+.headerTextWidgetForm {
+ @apply text-xl leading-6 flex items-center gap-2
+}
+
+.footerTextWidgetForm {
+  @apply text-xs text-neutral-400
+}
+
+.closeButton {
+  @apply top-5 right-5 absolute text-zinc-400 hover:text-zinc-100 
+}
+
+.contentContainerWidgetForm {
+  @apply flex py-8 gap-2 w-full
+}
+
+.feedbackTypeButton {
+  @apply bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex-col items-center gap-2 border-2 border-transparent hover:border-brand-500 focus:border-brand-500 focus:outline-none
+}
+
+.imageContentForm {
+  @apply w-6 h-6
+}
+
+.buttonForwardWidgetForm {
+  @apply top-5 left-5 absolute text-zinc-400 hover:text-zinc-100
+}
+
+.forwardWidgetForm {
+  @apply w-4 h-4
+}
+
+.formContainer{
+  @apply my-4 w-full
+}
+
+.formTextArea { 
+  @apply min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 bg-transparent rounded-md focus:outline-none focus:border-brand-500 focus:ring-brand-500 focus:ring-1 resize-none scrollbar scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin
+} 
+
+.formFooterContentStep {
+  @apply flex gap-2
+}
+
+.formButtonContentStep {
+  @apply p-2 bg-brand-500 rounded-[4px] border-transparent flex-1 flex justify-center items-center text-sm hover:bg-brand-hover focus:outline-none focus:ring-offset-zinc-900 focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 transition-colors disabled:opacity-50 disabled:hover:bg-brand-500
+}
+
+.screenshotButtonContentStep {
+  @apply p-2 bg-zinc-800 rounded-[4px] border-transparent hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-offset-zinc-900 focus:ring-2 focus:ring-offset-2 focus:ring-brand-500
+}
+
+.cameraIconContentStep {
+  @apply w-6 h-6 text-zinc-100
+}
+.loadingContainer{
+ @apply w-6 h-6 flex items-center justify-center overflow-hidden
+}
+.loadingButton{
+  @apply w-4 h-4 animate-spin
+}
+
+.photoPreviewScreenshotButton{
+ @apply p-1 w-10 h-10 rounded-[4px] border-transparent flex justify-end items-end text-zinc-400 hover:text-zinc-100 transition-colors
+}
+
+.successContainer {
+  @apply flex flex-col items-center py-10 w-[304px]
+}
+
+.successText {
+  @apply text-xl mt-2 
+}
+
+.successButton {
+  @apply py-2 px-6 mt-6 bg-zinc-800 rounded-[4px] border-transparent text-sm leading-6 hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-offset-zinc-900 focus:ring-2 focus:ring-offset-2 focus:ring-brand-500
 }
