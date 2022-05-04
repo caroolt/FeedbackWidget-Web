@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-
 import bugImageUrl from '../../assets/bug.svg';
 import ideaImageUrl from '../../assets/idea.svg';
 import otherImageUrl from '../../assets/other.svg';
@@ -36,37 +35,42 @@ export type FeedbackType = keyof typeof feedbackTypes;
 
 export function WidgetForm() {
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null);
-  const [feedbackSent, setFeedbackSent] = useState(false)
+  const [feedbackSent, setFeedbackSent] = useState(false);
 
   function handleRestartFeedback() {
-    setFeedbackSent(false)
-    setFeedbackType(null)
-  };
+    setFeedbackSent(false);
+    setFeedbackType(null);
+  }
 
-  return(
+  return (
     <div className='containerWidgetForm'>
-
-      {
-        feedbackSent ? (
-          <FeedbackSuccessStep onFeedbackRestartRequested={handleRestartFeedback}/>
-        ) : (
-          <>
+      {feedbackSent ? (
+        <FeedbackSuccessStep
+          onFeedbackRestartRequested={handleRestartFeedback}
+        />
+      ) : (
+        <>
           {!feedbackType ? (
             <FeedbackTypeStep onFeedbackTypeChanged={setFeedbackType} />
-                ) : (
-              <FeedbackContentStep
-            feedbackType={feedbackType}
-            onFeedbackRestartRequested={handleRestartFeedback}
-            onFeedbackSent={() => setFeedbackSent(true)}
-              />
-            )}
-          </>
-        )
-      }
+          ) : (
+            <FeedbackContentStep
+              feedbackType={feedbackType}
+              onFeedbackRestartRequested={handleRestartFeedback}
+              onFeedbackSent={() => setFeedbackSent(true)}
+            />
+          )}
+        </>
+      )}
 
       <footer className='footerTextWidgetForm'>
-        Feito com ♥ pela <a href='https://www.linkedin.com/in/carolinateixeiracoelho/' className='underline underline-offset-2'>Caronte</a>
+        Feito com ♥ pela{' '}
+        <a
+          href='https://www.linkedin.com/in/carolinateixeiracoelho/'
+          className='underline underline-offset-2'
+        >
+          Caronte
+        </a>
       </footer>
     </div>
-  )
+  );
 }

@@ -5,20 +5,20 @@ import html2canvas from 'html2canvas';
 import { Loading } from '../LoadingButton';
 
 interface ScreenshotButtonProps {
-  screenshot: string | null
+  screenshot: string | null;
   onScreenshotTaken: (screenshot: string | null) => void;
 }
 
 export function ScreenshotButton({
   screenshot,
-  onScreenshotTaken
+  onScreenshotTaken,
 }: ScreenshotButtonProps) {
-  const [isTakingScreenshot, setIsTakingScreenshot] = useState(false)
+  const [isTakingScreenshot, setIsTakingScreenshot] = useState(false);
 
   async function handleTakeScreenshot() {
     setIsTakingScreenshot(true);
 
-    const canvas = await html2canvas(document.querySelector('html')!)
+    const canvas = await html2canvas(document.querySelector('html')!);
     const base64image = canvas.toDataURL('image/png');
 
     onScreenshotTaken(base64image);
@@ -34,21 +34,25 @@ export function ScreenshotButton({
         style={{
           backgroundImage: `url(${screenshot})`,
           backgroundPosition: 'right bottom',
-          backgroundSize: 180
+          backgroundSize: 180,
         }}
       >
-        <Trash weight='fill'/>
-     </button>
+        <Trash weight='fill' />
+      </button>
     );
   }
 
   return (
-     <button
-            type='button'
+    <button
+      type='button'
       className='screenshotButtonContentStep'
       onClick={handleTakeScreenshot}
-          >
-          {isTakingScreenshot ? <Loading/> :   <Camera className='cameraIconContentStep'/>}
-      </button>
-  )
+    >
+      {isTakingScreenshot ? (
+        <Loading />
+      ) : (
+        <Camera className='cameraIconContentStep' />
+      )}
+    </button>
+  );
 }
