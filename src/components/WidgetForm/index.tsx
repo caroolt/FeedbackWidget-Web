@@ -63,7 +63,7 @@ export function WidgetForm() {
       )}
 
       <footer className='footerTextWidgetForm'>
-        Feito com ♥ pela
+        Feito com ♥ pela 
         <a
           href='https://www.linkedin.com/in/carolinateixeiracoelho/'
           className='underline underline-offset-2'
